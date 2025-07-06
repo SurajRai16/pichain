@@ -1,11 +1,11 @@
 import React from "react";
-
-const page = () => {
+import Hero from "@/components/Hero/Hero";
+const Footer = () => {
   return (
-    <div>
-      <div className="section-width text-green-700">hi naresh</div>
+    <div className="">
+      <Hero />
     </div>
   );
 };
 
-export default page;
+export default Footer;
