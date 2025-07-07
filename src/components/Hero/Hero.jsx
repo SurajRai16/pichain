@@ -3,9 +3,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="section-width margin-top margin-bottom relative  ">
+    <div className="section-width margin-top margin-bottom relative mb-0  2xl:mb-60">
       {/* Video Background */}
-      <div className="absolute inset-0 overflow-hidden  xl:min-h-[700px] lg:min-h-[600px] xxl:min-h-[800px]">
+      <div className="absolute inset-0 overflow-hidden  xl:min-h-[700px] lg:min-h-[600px] 2xl:min-h-[850px]">
         <div className="absolute bottom-20 md:bottom-10 lg:bottom-28  z-0">
           <video
             autoPlay
@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-20  flex flex-col gap-6 md:items-start items-center text-center md:text-left sm:mt-20 pb-56 pt-10">
+      <div className="relative z-20  flex flex-col gap-6 md:items-start items-center text-center md:text-left sm:mt-20 pb-36">
         <div>
           <h1 className="text-transparent bg-clip-text bg-[radial-gradient(65%_100%_at_50%_50%,_#FFFFFF_30%,_rgba(255,255,255,0.4)_100%)] leading-tight">
             Engage, Verify, and Onboard <br /> with Ease Across Industries

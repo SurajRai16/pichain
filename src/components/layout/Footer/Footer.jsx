@@ -14,9 +14,18 @@ const handleSmoothScroll = (e) => {
 };
 
 const Footer = () => {
+  // Navigation routes configuration
+  const navigationRoutes = [
+    { label: "About Us", href: "#whoarewe" },
+    { label: "Features", href: "#features" },
+    { label: "Why Realm", href: "#whychoosebtm" },
+    { label: "Blogs", href: "#blogs" },
+    { label: "Get in Touch", href: "#contact" },
+  ];
+
   return (
-    <footer className="text-white bg-[#0A0A0A] padding-bottom border-t-[0.1px] border-white border-opacity-15">
-      <div className="section-width py-16 px-12   md:px-0">
+    <footer className="text-white bg-[#0A0A0A] border border-white border-opacity-15 mx-5 md:mx-14 rounded-xl">
+      <div className="section-width py-16 px-5 sm:px-12   md:px-0">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-14">
           {/* Logo on Left */}
@@ -24,30 +33,29 @@ const Footer = () => {
             <Image
               src="/images/logo/logo.png"
               alt="Realm Logo"
-              width={1000}
-              height={1000}
-              className="w-[140px] h-auto object-contain"
+              width={250}
+              height={250}
+              className=" object-contain"
             />
           </div>
 
           {/* Navigation Links on Right */}
-          <div className="flex flex-wrap gap-8 md:gap-20">
-            <p className="text-gray-400 font-semibold text-xs uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity">
-              <a href="#whoarewe"> About US</a>
-            </p>
-            <p className="text-gray-400 font-semibold text-xs uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity">
-              <a href="#features"> FEATURES</a>
-            </p>
-            <p className="text-gray-400 font-semibold text-xs uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity">
-              <a href="#whychoosebtm">WHY REALM</a>
-            </p>
-            <p className="text-gray-400 font-semibold text-xs uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity">
-              <a href="#blogs"> BLOGS</a>
-            </p>
-            <p className="text-gray-400 font-semibold text-xs uppercase tracking-wider cursor-pointer hover:opacity-80 transition-opacity">
-              <a href="#contact"> GET IN TOUCH</a>
-            </p>
-          </div>
+          <nav className="flex flex-col ">
+            <h3 className="text-white mb-4">Quick Links</h3>
+            <ul className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16">
+              {navigationRoutes.map((route, index) => (
+                <li key={index}>
+                  <a
+                    href={route.href}
+                    className="text-gray-400 text-xs sm:text-sm uppercase tracking-wider cursor-pointer hover:text-white hover:opacity-80 transition-all duration-300 ease-in-out block py-1"
+                    onClick={handleSmoothScroll}
+                  >
+                    {route.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
         {/* Divider */}
@@ -57,74 +65,27 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           {/* Left Side - Copyright and Links */}
           <div className="flex flex-wrap items-center gap-4 md:gap-10 mb-6 md:mb-0">
-            <span className="text-gray-400 text-sm">
-              © Realm 2024. All rights reserved
-            </span>
-
             <a
               href="#"
-              className="flex items-center text-sm text-gray-400 hover:text-white transition-colors"
+              className="flex items-center text-xs md:text-lg text-gray-400 hover:text-white transition-colors"
             >
-              <span className="text-md mr-1">
-                <GoDotFill />
-              </span>
-              Terms of Use
+              Privacy Policy{" "}
             </a>
             <a
               href="#"
-              className="text-gray-400 text-sm text-center flex justify-center items-center hover:text-white transition-colors"
+              className="flex items-center text-xs md:text-lg text-gray-400 hover:text-white transition-colors"
             >
-              <span className="text-md mr-1">
-                <GoDotFill />
-              </span>
-              Privacy Policy
+              Terms of Conditions{" "}
             </a>
           </div>
 
           {/* Right Side - App Store, Google Play, Social Icons */}
           <div className="flex items-center gap-6">
-            {/* App Store */}
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/images/hero/appstore.png"
-                alt="Download on the App Store"
-                width={1000}
-                height={1000}
-                className="sm:h-11 h-12  object-contain w-auto"
-              />
-            </a>
-
-            {/* Google Play */}
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/images/hero/playstore.png"
-                alt="Get it on Google Play"
-                width={1000}
-                height={1000}
-                className="sm:h-11 h-12 object-contain w-auto"
-              />
-            </a>
-
-            {/* Instagram Icon */}
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/images/hero/insta.png"
-                alt="Get it on Google Play"
-                width={1000}
-                height={1000}
-                className="sm:h-10 h-12 object-contain w-auto"
-              />
-            </a>
-
-            {/* LinkedIn Icon */}
-            <a href="#" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/images/hero/linkedin.png"
-                alt="Get it on Google Play"
-                width={1000}
-                height={1000}
-                className="sm:h-10 h-12 object-contain w-auto"
-              />
+            <a
+              href="#"
+              className="flex items-center text-xs md:text-lg text-gray-400 hover:text-white transition-colors"
+            >
+              Pichain, LLC. All rights reserved.
             </a>
           </div>
         </div>

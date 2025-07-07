@@ -27,18 +27,18 @@ const WhyPiChain = () => {
   ];
 
   return (
-    <section className="section-width py-16 lg:py-24">
+    <section className="section-width pb-16 lg:pb-24">
       <div className="text-center mb-12 lg:mb-16">
-        <h1 className="text-transparent bg-clip-text bg-[radial-gradient(65%_100%_at_50%_50%,_#FFFFFF_30%,_rgba(255,255,255,0.4)_100%)] leading-tight">
+        <h2 className=" bg-gradient-to-r from-white to-[#717171] bg-clip-text text-transparent">
           Why PiChain{" "}
-        </h1>
+        </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-16 relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-10 relative">
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="relative backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 lg:p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden min-w-[280px] max-w-[400px] mx-auto w-full"
+            className="relative backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 lg:p-4 transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden min-w-[280px] max-w-[600px] mx-auto w-full "
             style={{
               backgroundImage: `url(${feature.image})`,
               backgroundSize: "cover",
@@ -50,10 +50,10 @@ const WhyPiChain = () => {
             {/* <div className="absolute inset-0 bg-black/5  rounded-2xl"></div> */}
 
             {/* Empty transparent div to maintain spacing for image area */}
-            <div className="relative z-10 h-48 sm:h-56 md:h-64 lg:h-56 mb-6 transparent"></div>
+            <div className="relative z-10 h-48 sm:h-56 md:h-32 xl:h-56 mb-6 transparent"></div>
 
             {/* Content */}
-            <div className="relative z-10 text-center mt-6 lg:mt-10">
+            <div className="relative z-10 text-center mt-6 lg:mt-20">
               <h4 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white mb-3 lg:mb-4 leading-tight">
                 {feature.title}
               </h4>
