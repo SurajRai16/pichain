@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       screens: {
         "lg-plus": "1025px",
+        'xxl': '1450px',
       },
       maxWidth: {
         '4xl': '1920px', // or any custom value you need

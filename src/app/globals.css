@@ -82,20 +82,12 @@ body {
   background-color: black;
   color: white;
 }
-/* .heading-gradient {
-  display: inline-block;
-  height: "";
-  background-image: radial-gradient(
-    65% 100% at 50% 50%,
-    #ffffff 30%,
-    rgba(255, 255, 255, 0.4) 100%
-  );
-
+.gradient-text {
+  color: transparent;
+  background: radial-gradient(46.12% 70.96% at 50% 50%, #FFFFFF 30%, rgba(255, 255, 255, 0.4) 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-} */
+}
 
 @layer utilities {
   .text-balance {
