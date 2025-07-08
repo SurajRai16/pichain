@@ -49,7 +49,7 @@ export default function PiChainContactForm() {
 
         <div className="relative z-10 flex flex-col lg:flex-row p-6 sm:p-8 lg:p-16">
           {/* Left side - Content */}
-          <div className="flex-1 flex flex-col justify-center lg:pt-20 mb-8 lg:mb-0">
+          <div className="flex-1 flex flex-col justify-center lg:pt-20 mb-6 lg:mb-0 px-2">
             <div className="">
               <p className="bg-gradient-to-r from-[#7D7D7D] via-[#FEFEFE] to-[#717171] bg-clip-text text-transparent mb-3 lg:mb-8">
                 Building Trust at Every Step
@@ -199,7 +199,7 @@ export default function PiChainContactForm() {
                 {/* Submit button */}
                 <div
                   onClick={handleSubmit}
-                  className="w-full bg-[#606060] text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer text-center text-xs sm:text-sm"
+                  className="w-full bg-[#606060] text-white py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer text-center text-xs sm:text-sm font-light"
                 >
                   Submit
                 </div>

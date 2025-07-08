@@ -21,9 +21,9 @@ const Navbar = () => {
   // };
 
   return (
-    <nav className=" ">
+    <nav className="relative">
       {/* Desktop Navbar */}
-      <div className="section-width  ">
+      <div className="section-width">
         <div className="flex items-center justify-between h-16 bg-[#9D9D9D17] rounded-full px-3 sm:px-6 mt-5 sm:mt-10 sm:py-10">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -46,6 +46,13 @@ const Navbar = () => {
                 className="text-white hover:text-pink-400 transition-colors text-sm xl:text-base duration-200 whitespace-nowrap"
                 // onClick={handleSmoothScroll}
               >
+                Home
+              </a>
+              <a
+                href="#whoarewe"
+                className="text-white hover:text-pink-400 transition-colors text-sm xl:text-base duration-200 whitespace-nowrap"
+                // onClick={handleSmoothScroll}
+              >
                 About Us
               </a>
               <a
@@ -53,31 +60,31 @@ const Navbar = () => {
                 className="text-white hover:text-pink-400 transition-colors duration-200 text-sm xl:text-base whitespace-nowrap"
                 // onClick={handleSmoothScroll}
               >
-                Features
+                Solutions
               </a>
               <a
                 href="#whychoose"
                 className="text-white hover:text-pink-400 transition-colors duration-200  text-sm xl:text-base whitespace-nowrap"
                 // onClick={handleSmoothScroll}
               >
-                Why Realm
+                Industries{" "}
               </a>
               <a
                 href="#blogs"
-                className="text-white hover:text-pink-400 transition-colors duration-200 text-sm xl:text-base whitespace-nowrap"
+                className="text-white hover:text-gray-400 transition-colors duration-200 text-sm xl:text-base whitespace-nowrap"
                 // onClick={handleSmoothScroll}
               >
-                Blogs
+                Try Luna
               </a>
             </div>
           </div>
 
           {/* Desktop Sign Up Button */}
-          <div className="hidden md:block flex-shrink-0">
+          <div className="hidden md:block flex-shrink-0 ml-2">
             <button className="bg-[linear-gradient(180deg,_#484848_0%,_#878787_100%)] text-white px-2 2xl:px-4 py-2 2xl:py-2 rounded-xl transition-all duration-200">
               <a
                 href="#contact"
-                className="text-white transition-colors duration-200 font-light text-sm 2xl:text-base whitespace-nowrap"
+                className="text-white transition-colors duration-200 font-light sm:text-xs md:text-sm 2xl:text-base whitespace-nowrap"
               >
                 Request a Demo{" "}
               </a>
@@ -96,10 +103,17 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation Menu - Now positioned absolutely */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black border border-gray-800 mx-5 rounded-xl mt-5">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-black border border-gray-800 mx-5 rounded-xl mt-5 z-50">
           <div className="px-4 pt-4 pb-6 space-y-4">
+            <a
+              href="#whoarewe"
+              className="block text-white hover:text-pink-400 transition-colors duration-200 font-medium py-2 text-sm"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home{" "}
+            </a>
             <a
               href="#whoarewe"
               className="block text-white hover:text-pink-400 transition-colors duration-200 font-medium py-2 text-sm"
@@ -112,31 +126,29 @@ const Navbar = () => {
               className="block text-white hover:text-pink-400 transition-colors duration-200 font-medium py-2 text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
-              Features
+              Solutions{" "}
             </a>
             <a
               href="#whychoose"
               className="block text-white hover:text-pink-400 transition-colors duration-200 font-medium py-2 text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
-              Why Realm
+              Industries{" "}
             </a>
             <a
               href="#blogs"
               className="block text-white hover:text-pink-400 transition-colors duration-200 font-medium py-2 text-sm"
               onClick={() => setIsMenuOpen(false)}
             >
-              Blogs
+              Try Luna{" "}
             </a>
-            <div className="pt-4">
-              <button className="w-full bg-transparent border border-gray-600 text-white px-6 py-3 rounded-full hover:border-pink-400 hover:text-pink-400 transition-all duration-200 font-medium text-sm">
+            <div className="">
+              <button className="w-full bg-[linear-gradient(180deg,_#484848_0%,_#878787_100%)] text-white px-2 2xl:px-4 py-2 2xl:py-2 rounded-xl transition-all duration-200">
                 <a
                   href="#contact"
-                  className="text-white hover:text-pink-400 transition-colors duration-200 font-medium text-sm xl:text-base whitespace-nowrap"
-                  onClick={() => setIsMenuOpen(false)}
-                  // onClick={handleSmoothScroll}
+                  className="text-white transition-colors duration-200 font-light text-sm 2xl:text-base whitespace-nowrap"
                 >
-                  Get in Touch
+                  Request a Demo{" "}
                 </a>
               </button>
             </div>
